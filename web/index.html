@@ -7,26 +7,19 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/hover.css">
     <link rel="icon" href="https://img.icons8.com/cotton/128/cat-back-view.png" type="image/x-icon">
-    <title>COZY SITE</title>
+    <title>GIGACAT</title>
 </head>
 <body>
     <header>
-        <h1>COZY SITE</h1>
+        <h1>An Average Blogs Site</h1>
     </header>
-
-    <p>
-        Test 
-        <a href="/" class="hvr-grow hvr-float">Test</a>
-    </p>
-
     <main>
-        <section id="post-feed">
+        <section id="blogs">
+            <div hx-get="/api/blog-previews" hx-trigger="load" hx-target="#blogs" hx-swap="outerHTML">
+              </div>
         </section>
     </main>
 
-    
-    <div id="load-posts" hx-get="/fetch-posts?count=10">
-        <button hx-trigger="click" hx-swap="outerHTML" hx-target="#post-feed">Load More</button>
-    </div>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+{{range .BlogPreviews}}
+<a href="{{.BlogPageUrl}}" class="blog-preview">
+  <div class="thumbnail">
+    <img src="{{.ThumbnailUrl}}" alt="Thumbnail Image">
+  </div>
+  <div class="content">
+    <div class="title">{{.Title}}</div>
+    <div class="description">{{.Description}}</div>
+  </div>
+</a>
+{{end}}
